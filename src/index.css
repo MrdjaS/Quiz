@@ -1,5 +1,5 @@
 html {
-  height: 800px;
+  height: 1000px;
   background: linear-gradient(180deg, rgba(19,34,72,1) 0%, rgba(19,17,51,1) 50%, rgba(18,2,33,1) 100%);
   color: white;
 }
@@ -18,7 +18,14 @@ code {
     monospace;
 }
 
-/*.title {
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
   font-size: 82px;
   display: inline-block;
   margin-bottom: 50px; 
@@ -30,8 +37,8 @@ code {
   height: 15px;
   width: 133px;
   position: absolute;
-  bottom: 545px;
-  right: 670px;
+  top: 190px;
+  right: 44%;
   z-index: -1;
 }
 
@@ -42,4 +49,115 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}*/
+}
+
+.MuiModal-root .MuiPaper-root {
+  margin-top: 25px;
+  border: 1px solid #8d79e9;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(19,18,53,1) 0%, rgba(19,16,50,1) 50%, rgba(19,14,48,1) 100%);
+}
+
+.MuiPaper-root .MuiList-root {
+  padding: 0px;
+}
+
+.MuiModal-root .MuiPaper-root .MuiList-root .MuiMenuItem-root {
+  padding: 10px 40px;
+}
+
+.MuiFormControl-root .MuiInputLabel-root {
+  padding-left: 50px;
+}
+
+
+/* Question component */
+
+.container {
+  display: flex;
+  margin-top: 150px;
+}
+
+.container .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .container .wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.container .score {
+  position: absolute;
+  width: 200px;
+  top: 20px;
+  left: 0px;
+  background-color: #2b3064;
+  border: 1px solid #2b3064;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.container .score p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.container .wrapper .answer {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #8d79e9;
+  border-radius: 40px;
+  padding: 20px 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  cursor: pointer;
+  width: 180px;
+}
+
+.container .wrapper .answer:hover {
+  background-color: #372e67;
+}
+
+.container .skip {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #595066;
+  color: white;
+  border: 1px solid #595066;
+  border-radius: 30px;
+  padding: 5px 15px;
+  margin-top: 110px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+/*FinalScreen*/
+
+.container .final-title {
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+
+.container .back{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #8d79e9;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.container .back:hover{
+  background-color: #1976d2;
+}

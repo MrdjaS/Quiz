@@ -1,8 +1,8 @@
-import { Typography, Button } from "@mui/material";
-import { Box } from "@mui/system";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { handleAmountChange, handleScoreChange } from "../redux/actions";
+import '../../src/index.css';
+
 
 const FinalScreen = () => {
   const dispatch = useDispatch();
@@ -16,10 +16,10 @@ const FinalScreen = () => {
   };
 
     return (
-      <Box mt={30}>
-        <Typography variant="h3" fontWeight="bold" mb={3}>Final Score {score}</Typography>
-        <Button onClick={handleBackToSettings} variant="outlined">Back to Settings!</Button>
-      </Box>
+      <div className="container">
+        <h1 className="final-title">Final Score: {score} pts</h1>
+        <button className="back" onClick={handleBackToSettings}>Back to Settings!</button>
+      </div>
     );
   };
   

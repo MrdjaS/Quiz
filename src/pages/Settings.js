@@ -3,11 +3,23 @@ import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import { Button, CircularProgress, Typography } from '@mui/material';
 import useAxios from "../hooks/useAxios";
-//import '../../src/index.css';
+import { makeStyles } from "@material-ui/core";
+
+
+const useStyles = makeStyles({
+  button: {
+    width:'350px',
+    border: '1px solid black',
+    marginLeft: '40px',
+    backgroundColor: '#8d79e9',
+    borderRadius: "20px"
+  },
+})
 
 const Settings = () => {
   const { response, error, loading } = useAxios({ url: "/api_category.php"});
   const navigate = useNavigate();
+  const classes = useStyles();
 
   if(loading) {
     return (
@@ -50,7 +62,7 @@ const Settings = () => {
       <SelectField options={categoryOptions} label="SELECT CATEGORY"/>
       <SelectField options={amountOptions} label="AMOUNT"/>
       <Box mt={3} width="100%">
-        <Button fullWidth variant="contained" type="submit">
+        <Button fullWidth variant="contained" type="submit" className={classes.button}> 
           Get started
         </Button>
       </Box>

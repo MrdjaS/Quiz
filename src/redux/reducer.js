@@ -4,7 +4,7 @@ const initialState = {
     question_category: "",
     question_difficulty: "medium",
     question_type: "multiple",
-    amount_of_question: 20,
+    amount_of_question: 10,
     score: 0
 };
 
