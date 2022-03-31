@@ -31,17 +31,6 @@ code {
   margin-bottom: 50px; 
 }
 
-.title:before {
-  content: "";
-  background: #8d79e9;
-  height: 15px;
-  width: 133px;
-  position: absolute;
-  top: 190px;
-  right: 44%;
-  z-index: -1;
-}
-
 .container {
   max-width: 1140px;
   margin: auto;
